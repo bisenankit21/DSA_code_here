@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+#include<string>
+using namespace std;
+ 
+bool arePermutation(string A, string B)
+{
+    // your code goes here
+    int n1=A.length();
+    int n2=B.length();
+    if(n1!=n2){
+        return false;
+    }
+    sort(A.begin(),A.end());
+    sort(B.begin(),B.end());
+    for(int j=0;j<n2;j++){
+            if(A[j]!=B[j]){
+                return false;
+             }
+    }
+     return true;
+}
